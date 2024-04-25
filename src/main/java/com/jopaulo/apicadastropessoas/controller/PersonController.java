@@ -1,20 +1,19 @@
 package com.jopaulo.apicadastropessoas.controller;
 
+import com.jopaulo.apicadastropessoas.exception.PersonNotFoundException;
 import jakarta.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.jopaulo.apicadastropessoas.dto.request.PersonDTO;
 import com.jopaulo.apicadastropessoas.dto.response.MessageResponseDTO;
 import com.jopaulo.apicadastropessoas.service.PersonService;
 
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -28,5 +27,15 @@ public class PersonController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public MessageResponseDTO create(@Valid @RequestBody PersonDTO dto) {
 		return service.create(dto);
+	}
+
+	@GetMapping
+	public List<PersonDTO> listAll(){
+		return service.listAll();
+	}
+
+	@GetMapping("/{id}")
+	public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
+		return service.findById(id);
 	}
 }

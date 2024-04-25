@@ -13,7 +13,6 @@ import com.jopaulo.apicadastropessoas.repository.PersonRepository;
 import jakarta.transaction.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,10 +28,7 @@ public class PersonService {
 		Person entity = mapper.toModel(dto);
 				
 		Person person = repository.save(entity);
-		return MessageResponseDTO
-				.builder()
-				.message("Pessoa criada com sucesso: " + person.getFirstName()+" "+person.getLastName())
-				.build();
+		return updateAndCreateMessageResponse("Pessoa criada com sucesso: ", person);
 	}
 
 	public List<PersonDTO> listAll() {
@@ -41,8 +37,32 @@ public class PersonService {
 	}
 
 	public PersonDTO findById(Long id) throws PersonNotFoundException {
-		Person person = repository.findById(id).orElseThrow(() -> new PersonNotFoundException(id));
+		Person person = verifyIfExists(id);
 		return mapper.toDTO(person);
 	}
+
+	public MessageResponseDTO update(Long id, PersonDTO dto) throws PersonNotFoundException {
+		verifyIfExists(id);
+		Person entity = mapper.toModel(dto);
+		Person person = repository.save(entity);
+		return updateAndCreateMessageResponse("Pessoa atualizada com sucesso: ", person);
+	}
+
+	public void delete(Long id) throws PersonNotFoundException {
+		verifyIfExists(id);
+		repository.deleteById(id);
+	}
+
+	private Person verifyIfExists(Long id) throws PersonNotFoundException {
+		return repository.findById(id).orElseThrow(() -> new PersonNotFoundException(id));
+	}
+
+	private static MessageResponseDTO updateAndCreateMessageResponse(String x, Person person) {
+		return MessageResponseDTO
+				.builder()
+				.message(x + person.getFirstName() + " " + person.getLastName())
+				.build();
+	}
+
 //	https://github.com/rpeleias/personApi/tree/master  mapstruct
 }

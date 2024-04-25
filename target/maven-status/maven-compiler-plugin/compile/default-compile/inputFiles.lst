@@ -1,0 +1,11 @@
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/mapper/PersonMapper.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/controller/PersonController.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/repository/PersonRepository.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/ApiCadastroPessoasApplication.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/dto/response/MessageResponseDTO.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/dto/request/PersonDTO.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/entity/Person.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/enums/PhoneType.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/dto/request/PhoneDTO.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/service/PersonService.java
+/home/bruna/Documentos/intellij-workspace/api-cadastro-pessoas/src/main/java/com/jopaulo/apicadastropessoas/entity/Phone.java

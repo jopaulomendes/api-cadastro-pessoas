@@ -1,0 +1,17 @@
+com/jopaulo/apicadastropessoas/service/PersonService.class
+com/jopaulo/apicadastropessoas/entity/Phone.class
+com/jopaulo/apicadastropessoas/entity/Person$PersonBuilder.class
+com/jopaulo/apicadastropessoas/dto/request/PhoneDTO.class
+com/jopaulo/apicadastropessoas/entity/Phone$PhoneBuilder.class
+com/jopaulo/apicadastropessoas/dto/request/PersonDTO.class
+com/jopaulo/apicadastropessoas/mapper/PersonMapper.class
+com/jopaulo/apicadastropessoas/entity/Person.class
+com/jopaulo/apicadastropessoas/dto/response/MessageResponseDTO.class
+com/jopaulo/apicadastropessoas/dto/request/PhoneDTO$PhoneDTOBuilder.class
+com/jopaulo/apicadastropessoas/dto/response/MessageResponseDTO$MessageResponseDTOBuilder.class
+com/jopaulo/apicadastropessoas/repository/PersonRepository.class
+com/jopaulo/apicadastropessoas/controller/PersonController.class
+com/jopaulo/apicadastropessoas/ApiCadastroPessoasApplication.class
+com/jopaulo/apicadastropessoas/enums/PhoneType.class
+com/jopaulo/apicadastropessoas/dto/request/PersonDTO$PersonDTOBuilder.class
+com/jopaulo/apicadastropessoas/mapper/PersonMapperImpl.class

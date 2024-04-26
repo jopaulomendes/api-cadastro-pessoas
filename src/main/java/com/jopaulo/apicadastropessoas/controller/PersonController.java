@@ -3,6 +3,7 @@ package com.jopaulo.apicadastropessoas.controller;
 import com.jopaulo.apicadastropessoas.exception.PersonNotFoundException;
 import jakarta.validation.Valid;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -16,11 +17,10 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/api/people")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
-	@Autowired
 	private PersonService service;
 	
 	@PostMapping
